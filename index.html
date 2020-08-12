@@ -1,17 +1,84 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>Hello World</h1>
-        <p>
-            Haven't added real content, but this ended up being very simple! And we can link to the Twine chapters easily like so:  
-        </p>
+<html lang="en">
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" href="images/favicon_io/favicon.ico"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <!--navigation bar--> 
+    <nav class="navigation">
+        <a href="#">about</a>
+        <a href="#" >meet the team</a> 					
+        <a href="#">submit a story</a> 
+        <a href="#.html">contact us</a> 
+    </nav>
+    
+            <!--JS Pop-up -->
+        <style>
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+/* The popup from my last project, which needs to be changed to match our site's style... */
+.popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 25%;
+    left: 90%;
+    margin-left: 100px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+
+.popup .show {
+    visibility: visible;
+}
+</style>
+    
+    <title>Columbia Int Fic: What IF</title>
+    
+        <body>
+     <!---- VERY IMPORTANT. THE PINPOINTS NEED TO BE INDIVIDUAL IMAGES PLACED IN FIGMA FOR ME TO MAKE THEM INTO LINKS.
+    
+    I know how to make the pinpoints into links, though I'm still figuring out how to place them in particulare spots. I also have the js code for pop ups, but I do need to change the formatting to match out site's styles.
+
+     -->
+             <div class="popup" onclick="myFunction()"><p><u><link rel="pinpoint" href="images/Group%2019.png"/></u></p><span class="popuptext" id="myPopup"> 
         
-         <ul><li><a href="Test%20File.html">Chapter 1</a></li>
-             <li>Chapter 2</li>
-             <li>Chapter 3</li>
-             <li>and so on...</li>
-        </ul>
-        <p>And eventually CSS can be added to pretty this up.
-        </p>
+                 <p>This story is about a dog, a person, and an ill-timed squirrel.
+                 </p>
+                 
+            <ul>
+                <li><a href="###">org/charity links?</a></li>
+                <li><a href="###">Story Link</a></li>
+                
+            </ul>
+            </span></div>      
+
+
+<script>
+
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+            
+            
     </body>
+    
+<!--idk if we need a footer, but just in case
+    <footer>&copy; Columbia Int Fic 2020
+    </footer>  
+-->
 </html>
