@@ -13,8 +13,8 @@ body {
 /*font info*/
 
 @font-face {
-    font-family: "Roboto";
-    src: url("Roboto-Regular.ttf")
+    font-family: "TT Norms";
+    src: url("fonts/TTNorms-Bold.otf")
 }
 
 /*nav info, including link specs
