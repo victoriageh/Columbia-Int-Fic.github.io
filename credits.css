@@ -12,11 +12,17 @@ html, body{
 
 .footer, .push{
 	height:50px;
+	float:left;
+	background: #000000;
+	height:143px;
+}
+
+.footerText {
+	float:left;
 }
 
 body {
     background-color: #BAD1E5;;
-    height: 800px; /* it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
