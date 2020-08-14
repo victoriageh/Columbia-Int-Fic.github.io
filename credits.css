@@ -1,3 +1,19 @@
+html, body{
+	height:100%;
+	margin: 0;
+}
+
+.wrapper {
+	min-height:100%;
+
+	/* equal to height of footer, but also account for potential margin-bottom of last child*/
+	margin-bottom:-50px;
+}
+
+.footer, .push{
+	height:50px;
+}
+
 body {
     background-color: #BAD1E5;;
     height: 800px; /* it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
@@ -14,27 +30,8 @@ body {
 
 @font-face {
     font-family: "TT Norms";
-    src: url("fonts/TTNorms-Bold.otf")
+    src: url("fonts/TTNorms.otf")
 }
-
-/*nav info, including link specs
-ISSUES: come back to fix font, Roboto-Regular won'r work, despite download. Check with fresh eyes.
-*/
-
-.navigation {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-family: "Roboto-Regular", sans-serif; /*fix*/
-    font-size: 15pt;
-    background-color: #2B2D35;
-    text-align-last: right;
-    padding: 14px 16px; /*fix padding on right side*/
-    display: inline-block;
-}
-
-/* general links appearance, should specifiy later that these are nav links*/
 
 a:link {color: #ffffff; text-decoration: none; font-family: "Roboto-Regular", fantasy;
 } 
