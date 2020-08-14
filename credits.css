@@ -1,53 +1,74 @@
-html, body{
+body{
 	height:100%;
 	margin: 0;
+    background-color: #BAD1E5;
+	position: relative;
 }
 
-.wrapper {
-	min-height:100%;
+.online-users{
+	position: absolute;
+	left: 12.39%;
+	right: 55.73%;
+	top: 15.46%;
+	bottom: 24.35%;
 
-	/* equal to height of footer, but also account for potential margin-bottom of last child*/
-	margin-bottom:-50px;
+	background: #99B3C6;
 }
 
-.footer, .push{
-	height:50px;
+.total-users{
+	position: absolute;
+	left: 55.73%;
+	right: 12.39%;
+	top: 15.46%;
+	bottom: 24.35%;
+
+	background: #99B3C6;
+}
+
+.footer{
+	height:17%;
+ 	position: fixed;
+  	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #000000;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: "tt_normsbold", TT Norms, sans-serif;
+}
+
+.footerIMG {
 	float:left;
-	background: #000000;
-	height:143px;
+	height: 50%;
+	padding: 40px;
 }
 
 .footerText {
 	float:left;
-}
-
-body {
-    background-color: #BAD1E5;;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-	position: relative;
-	width: 1920px;
-	height: 1080px;
+	padding-top:15px;
+	padding-left:100px;
+	font-size: 40px;
 }
 
 /*font info*/
 
 @font-face {
-    font-family: "TT Norms";
-    src: url("fonts/TTNorms.otf")
+    font-family: 'tt_normsbold';
+    src: url('ttnorms-bold-webfont.woff2') format('woff2'),
+         url('ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-a:link {color: #ffffff; text-decoration: none; font-family: "Roboto-Regular", fantasy;
+a:link {color: #D5EDFF; text-decoration: none; font-family: "Roboto-Regular", fantasy;
 } 
-a:visited {color: mediumaquamarine; 
+a:visited {color: #D5EDFF; 
 } 
-a:focus {color: #FFFFFF; 
+a:focus {color: #B6CCDD; 
 } 
-a:hover {color: aquamarine; 
+a:hover {color: #B6CCDD; 
 } 
-a:active {color: blue; 
+a:active {color: #B6CCDD; 
 } 
 
 /*
