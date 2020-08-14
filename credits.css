@@ -1,5 +1,5 @@
 body{
-	height:100%;
+	height:80%;
 	margin: 0;
     background-color: #BAD1E5;
 	position: relative;
@@ -7,43 +7,46 @@ body{
 
 }
 
-.online-users{
-	position: absolute;
-	left: 12.39%;
-	right: 55.73%;
-	top: 15.46%;
-	bottom: 24.35%;
+.counters{
+	margin-top:8%;
 	text-align:center;
-	padding-top: 40px;
-
-	background: #99B3C6;
+	width:100%;
 }
 
-.total-users{
-	position: absolute;
-	left: 55.73%;
-	right: 12.39%;
-	top: 15.46%;
-	bottom: 24.35%;
-	text-align:center;
-	padding-top: 40px;
-
+.online-users, .total-users{
 	background: #99B3C6;
+	display: inline-block;
+	padding:2%;
+	margin:5%;
+	width:300px;
+
+	font-size:32px;
+	color:#FFFFFF;
+}
+
+.online-users h3, .total-users h3{
+	font-size:100px;
+	margin-top:20px;
+	margin-bottom:40px;
 }
 
 .space{
-	position: absolute;
 	height: 47px;
-	left: 39.11%;
-	right: 39.17%;
-	top: calc(50% - 47px/2 + 313.5px);
+    display:inline-block;
+	text-align:center;
 
 	font-family: 'tt_normsthin_italic', TT Norms, sans-serif;
-	font-weight:300px;
-	font-size: 40px;
-	line-height: 47px;
+	font-size: 30px;
 
 	color: #FFFFFF;
+}
+
+.space p {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer{
@@ -75,17 +78,17 @@ body{
 
 @font-face {
     font-family: 'TT Norms';
-    src: url('ttnorms-bold-webfont.woff2') format('woff2'),
-         url('ttnorms-bold-webfont.woff') format('woff');
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'tt_normsthin_italic';
-    src: url('ttnorms-thinitalic-webfont.woff2') format('woff2'),
-         url('ttnorms-thinitalic-webfont.woff') format('woff');
-    font-weight: 300px;
+    src: url('fonts/ttnorms-thinitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
