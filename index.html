@@ -57,16 +57,31 @@
                 <h1 class="splash-txt-1">WHAT IF?</h1>
                 <h1 class="splash-txt-2">Click to continue</h1>
             </div>
+            
+<!-- Wanted to use merged pinpoint image with coordinates to create clickable parts of image. The links would trigger the js popup.
+
+Messed with it a while, got the portions to link, but couldn't figure out coordinates. Also do coordinates scale to larger devices okay?
+
+Should try new strategy tomorrow. Scrap the clickable picture and existing pop up js and try js buttons (these would change color to indicate when clicked, unlike static photo). Figure out how to place the buttons at certain coordinates(?) and either link to pop up code or link to separate page (with same background) that holds story intro. If the same background is present it would look seemless.
+
+-->
+
+<img src="images/merged.png" alt="world map" usemap="#workmap" height="50%" width="100%" align=center>
+
+<map name="workmap">
+    <area shape="circle" coords="200,250,75,50" alt="Story 1" href="test_story.html">
+<!-- testing    <area shape="circle" coords="290,172,333,250" alt="Story 2" href="test_story.html">
+    <area shape="circle" coords="337,300,44" alt="Story 3" href="test_story.html">
+    <area shape="circle" coords="337,300,44" alt="Story 4" href="test_story.html"> -->
+</map>
 
 
+     <!----
 
-
-     <!---- VERY IMPORTANT. THE PINPOINTS NEED TO BE INDIVIDUAL IMAGES PLACED IN FIGMA FOR ME TO MAKE THEM INTO LINKS.
-    
-    I know how to make the pinpoints into links, though I'm still figuring out how to place them in particulare spots. I also have the js code for pop ups, but I do need to change the formatting to match out site's styles.
+    below js code for pop ups, but I do need to change the formatting to match our site's styles.
 
      -->
-             <div class="popup" onclick="myFunction()"><p><u><link rel="pinpoint" href="images/Group%2019.png"/></u></p><span class="popuptext" id="myPopup"> 
+             <div class="popup" onclick="myFunction()"><p><u>Story 1</u></p><span class="popuptext" id="myPopup"> 
         
                  <p>This story is about a dog, a person, and an ill-timed squirrel.
                  </p>

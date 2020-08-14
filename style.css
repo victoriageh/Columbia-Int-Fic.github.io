@@ -1,7 +1,7 @@
 body {
-    background-image: url(images/Group.svg);
+    /*background-image: url(images/Group.svg); testing out clickable map in html only */
     background-color: #2B2D35;
-    height: 800px; /* it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
+   /* height: 800px; it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,7 +23,7 @@ body {
 }
 
 /*nav info, including link specs
-ISSUES: come back to fix font, Roboto-Regular won'r work, despite download. Check with fresh eyes.
+ISSUES: come back to fix font, Roboto-Regular won't work, despite download. Check with fresh eyes.
 */
 
 .navigation {
