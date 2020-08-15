@@ -1,4 +1,4 @@
-body {
+#home-body {
     background-image: url(images/Group.svg);
     background-color: #2B2D35;
     height: 800px; /* it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
@@ -75,3 +75,64 @@ footer {
     width: 100%;
 }
 */
+
+#story-body {
+    background-color: #5D926E;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.head {
+    display: flex;
+}
+
+.story-pg-whatif {
+    padding-left: 50px;
+}
+
+.story-pg-title {
+    text-align: center;
+    font-size: 400%;
+    padding-left: 315px;
+    margin-top: 0px;
+}
+
+.footer {
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.story-main {
+    display:flex;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.stats {
+    width: 25%;
+    height: 65vh;
+    border: solid #000;
+    border-width: 3px;
+    background-color: white;
+    margin-left: 20px;
+    text-align: center;
+    position: fixed;
+}
+
+
+.story-txt {
+    width: 65%;
+    height: 65vh;
+    border: solid #000;
+    border-width: 3px;
+    background-color: #8EC29F;
+    margin-left: 390px;
+}
+
+
