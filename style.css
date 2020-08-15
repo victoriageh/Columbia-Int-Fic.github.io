@@ -97,42 +97,19 @@ footer {
 }
 
 .footer {
-    position: fixed; 
     left: 0; 
     bottom: 0; 
     width: 100%;
     text-align: center;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
-.story-main {
-    display:flex;
-    font-family: 'Catamaran', sans-serif;
-}
-
-.stats {
-    width: 25%;
-    height: 65vh;
-    border: solid #000;
-    border-width: 3px;
-    background-color: white;
-    margin-left: 20px;
-    text-align: center;
-    position: fixed;
-}
-
-
 .story-txt {
-    width: 65%;
-    height: 65vh;
+    width: 95%;
+    height: 100vh;
     border: solid #000;
     border-width: 3px;
     background-color: #8EC29F;
-    margin-left: 390px;
+    margin: auto;
 }
 
 
