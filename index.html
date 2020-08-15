@@ -12,38 +12,6 @@
         <a href="#.html">contact us</a> 
     </nav>
     
-            <!--JS Pop-up -->
-        <style>
-
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-}
-/* The popup from my last project, which needs to be changed to match our site's style... */
-.popup .popuptext {
-    visibility: hidden;
-    width: 300px;
-    background-color: #000;
-    color: #fff;
-    text-align: left;
-    border-radius: 6px;
-    padding: 8px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 25%;
-    left: 90%;
-    margin-left: 100px;
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-
-.popup .show {
-    visibility: visible;
-}
-</style>
     
     <title>Columbia Int Fic: What IF</title>
     
@@ -58,41 +26,18 @@
                 <h1 class="splash-txt-2">Click to continue</h1>
             </div>
             
-<!-- Wanted to use merged pinpoint image with coordinates to create clickable parts of image. The links would trigger the js popup.
+            <!----
 
-Messed with it a while, got the portions to link, but couldn't figure out coordinates. Also do coordinates scale to larger devices okay?
-
-Should try new strategy tomorrow. Scrap the clickable picture and existing pop up js and try js buttons (these would change color to indicate when clicked, unlike static photo). Figure out how to place the buttons at certain coordinates(?) and either link to pop up code or link to separate page (with same background) that holds story intro. If the same background is present it would look seemless.
-
--->
-
-<img src="images/merged.png" alt="world map" usemap="#workmap" height="50%" width="100%" align=center>
-
-<map name="workmap">
-    <area shape="circle" coords="200,250,75,50" alt="Story 1" href="test_story.html">
-<!-- testing    <area shape="circle" coords="290,172,333,250" alt="Story 2" href="test_story.html">
-    <area shape="circle" coords="337,300,44" alt="Story 3" href="test_story.html">
-    <area shape="circle" coords="337,300,44" alt="Story 4" href="test_story.html"> -->
-</map>
-
-
-     <!----
-
-    below js code for pop ups, but I do need to change the formatting to match our site's styles.
+    below js code for pop ups, I got the button to work as the popup indicator. Need to fix positioning and then change popup styles to match ours.
 
      -->
-             <div class="popup" onclick="myFunction()"><p><u>Story 1</u></p><span class="popuptext" id="myPopup"> 
         
-                 <p>This story is about a dog, a person, and an ill-timed squirrel.
-                 </p>
-                 
-            <ul>
-                <li><a href="###">org/charity links?</a></li>
-                <li><a href="###">Story Link</a></li>
-                
-            </ul>
+        <div class="popup" onclick="myFunction()"><p><u><a href="#myPopup" class="Button"></a></u></p><span class="popuptext" id="myPopup"> 
+                <h1>Story 1</h1>
+                 <p>This is story number one. It's awesome.<br>
+    <a href="test_story.html">Link to Sample Story</a>
+                </p>
             </span></div>      
-
 
 <script>
 

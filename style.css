@@ -1,7 +1,15 @@
+/*font info, still need to fix...
+but look popups work!
+*/
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Regular.ttf")
+}
+
 body {
-    /*background-image: url(images/Group.svg); testing out clickable map in html only */
+    background-image: url(images/Group.svg);
     background-color: #2B2D35;
-   /* height: 800px; it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
+    height: 800px; /*it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,13 +21,6 @@ body {
     left: -6px;
     top: 1px;
 */
-}
-
-/*font info*/
-
-@font-face {
-    font-family: "Roboto";
-    src: url("Roboto-Regular.ttf")
 }
 
 /*nav info, including link specs
@@ -41,29 +42,31 @@ ISSUES: come back to fix font, Roboto-Regular won't work, despite download. Chec
 
 /* general links appearance, should specifiy later that these are nav links*/
 
-a:link {color: #ffffff; text-decoration: none; font-family: "Roboto-Regular", fantasy;
+a:link {color: #000000; text-decoration: none; font-family: "Roboto-Regular", sans-serif;
 } 
 a:visited {color: mediumaquamarine; 
 } 
-a:focus {color: #FFFFFF; 
+a:focus {color: #000000; 
 } 
 a:hover {color: aquamarine; 
 } 
 a:active {color: blue; 
 } 
 
-/*
+/* Need to style nav links in white
 
-#nav a{
+#navigation a{
     font-family: "Roboto-Regular", "Roboto", sans-serif;
     color: white;
     text-decoration:none;
 }
 
+
 #nav a:hover {
     color: blue;
     text-decoration: underline;
 }
+*/
 
 /*end nav info, start footer*/
 
@@ -142,5 +145,63 @@ footer {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 2s;
+}
+
+/*Button
+    For this to work with more than one button, I think each button will need its own id. Will come back later to edit.
+*/
+
+.Button {
+	background-color:#000000;
+	border-radius:42px;
+	border:8px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:14px 14px;
+	text-decoration:none;
+    margin-left: 1700%;
+    margin-bottom: -750%;
+}
+.Button:hover {
+	background-color:#ffffff;
+}
+.Button:active {
+	position:relative;
+	top:1px;
+}
+
+/*javascript pop-up*/
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+/* The popup from my last project, which needs to be changed to match our site's style. Trying to figure out how black border could be coded in css rather than using a picture.
+
+*/
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 0%;
+    padding: 3%; 
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    left: 20%;
+    right: 20%;
+    z-index: 10000;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+
+.popup .show {
+    visibility: visible;
 }
 
