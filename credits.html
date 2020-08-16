@@ -7,12 +7,13 @@
         <meta name="description" content="Travely: Real-time intineraries powered by location AI.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="images/favicon_io/favicon.ico"/> 
-        <link rel="stylesheet" href="credits.css">
+        <link rel="stylesheet" href="credits.css"> <!-- CSS -->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script> <!-- jQuery import-->
     </head>
 
     <body>
         <main> 
-            <section class="counters"> 
+            <section class="counters" id="counters"> 
                 <div class="counter-block">
                     <p>there are</p>
                     <br>
@@ -38,15 +39,17 @@
                 </div>
                 <!-- prompt space to credits-->
             </section>
-            <div class="space-bar"><p>press space to continue</p></div>
-            <!-- project credits
-            <section class="project-credits">
+            <div class="space-bar" id="firstPage"><p class="space-text">continue</p></div>
+
+            <!-- project credits -->
+            <section class="project-credits" style="display:none" id="project-credits">
                 <h1>Project Credits</h1>
                 <div class="creds-rolling">
                     <h4>Writing</h4>
                     <p>Story One: name1, name2</p>
                     <p>Story Two: name1, name2</p>
                     <p>Story Three: name1, name2</p>
+                    <p>Story Four: name1, name2</p>
                     <br />
                     <h4>Tech</h4>
                     <p>name1, name2, name3</p>
@@ -54,13 +57,29 @@
                     <h4>Visuals</h4>
                     <p> name1, name2, name3</p>
                     <br />
+                    <h4>Social Media</h4>
+                    <p> name1, name2, name3</p>
+                    <br />
                 </div>
-            </section> -->
+            </section> 
             <div class="footer">
                 <img src="./images/favicon_io/apple-touch-icon.png" alt="int-fic icon">
                 <!-- # of people visiting not configured --> 
                 <h2>people from [x] countries have embarked on this journey</h2>
             </div> 
+            
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    /* delay continue button */
+                    $("div.space-bar").delay(1000).fadeTo(1000,1);
+                });
+                /* script to show second page */
+                $("div.space-bar").click(function(){
+                        $("#counters").hide();
+                        $("#firstPage").hide();
+                        $("#project-credits").fadeIn("slow");
+                });
+            </script>    
         </main> 
     </body>
 </html>

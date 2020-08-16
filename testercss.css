@@ -23,7 +23,7 @@ body{
 }
 
 p, h3, h4, h1 {
-	font-family: 'tt_normsbold', sans-serif;
+	font-family: "tt_normsbold", sans-serif;
 	color: var(--light);
 	text-decoration: none;
 }
@@ -64,34 +64,17 @@ main {
 	font-size:100px;
 }
 
-/* continue button */
-.space-bar{
-	grid-column: 1 / span 5;
-	height: 50px;
-	margin-top: 100px 0 0 0;
-	padding-top: 40px;
-	color: var(--light);
-	cursor: pointer;
-	opacity: 0;
-}
-
-.space-text{
-	text-align: center;
-	font-family: 'tt_normsthin_italic', sans-serif;
-	font-size: 30px;
-}
-/* project credits */
 .project-credits { /* span across entire screen */
     display: inline-block;
     grid-column: 1 / span 5;
     text-align: center;
-	margin-top: 70px;
+	margin-top: 100px;
 	font-size: 18px;
 }
 
 .project-credits h1 { /* span across entire screen */
-    font-family: 'mermaid_swash', serif;
-	padding: 10px;
+    font-family: "mermaid_swash", serif;
+	padding: 30px;
 	font-size: 80px;
 	word-spacing: 50px;
 }
@@ -103,11 +86,10 @@ main {
 }
 
 .project-credits p {
-	font-family: 'tt_normslight', sans-serif;
+	font-family: "tt_normslight", sans-serif;
 	letter-spacing: 1px;
 }
 
-/* footer, constant through two pages*/
 .footer{
 	grid-column: 1 / span 5;
 	align-self: end;
@@ -115,7 +97,7 @@ main {
 	background-color: var(--dark);
 	color: var(--light);
 	text-align: center;
-	font-family: 'tt_normsbold', sans-serif;
+	font-family: "tt_normsbold", sans-serif;
 }
 
 .footer img {
@@ -127,49 +109,10 @@ main {
 .footer h2 {
 	text-align: center;
 	padding-top: 20px;
-	font-size: 30px;
+	font-size: 40px;
 }
 
-/* media query */
-@media only screen and (max-width: 650px) { /*if hits this pixels or smaller, override styles above*/
-	.counter-block {
-		height: 300px;
-		padding: 25px 50px 20px 50px;
-	}
-
-	.counter-block p {
-		font-size: 16px;
-	}
-	
-	.counter-block h3{	
-		font-size:50px;
-	}
-
-	.space-bar{
-		height: 100px;
-		margin-top: 25px 0 0 0;
-		padding-top: 20px;
-	}
-
-	.space-text {
-		font-size: 25px;
-	}
-	
-	.footer {
-		height: 75px;
-	}
-
-	.footer img {
-		display: none;
-	}
-
-	.footer h2 {
-		padding: 10px;
-		font-size: 20px;
-	}
-}
-
-/* font info */
+/*font info*/
 
 @font-face {
     font-family: 'tt_normsbold';
@@ -195,15 +138,35 @@ main {
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'mermaid_swash';
     src: url('fonts/mermaid_swash_caps-webfont.woff2') format('woff2'),
          url('fonts/mermaid_swash_caps-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
+@font-face {
+    font-family: 'mermaidbold';
+    src: url('fonts/mermaid1001-webfont.woff2') format('woff2'),
+         url('fonts/mermaid1001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+a:link {color: #D5EDFF; text-decoration: none; font-family: "Roboto-Regular", fantasy;
+} 
+a:visited {color: #D5EDFF; 
+} 
+a:focus {color: #B6CCDD; 
+} 
+a:hover {color: #B6CCDD; 
+} 
+a:active {color: #B6CCDD; 
+} 
 
 
 
