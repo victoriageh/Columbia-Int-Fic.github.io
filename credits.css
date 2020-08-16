@@ -1,76 +1,102 @@
-body{
-	height:80%;
+:root {
+    --dark: #000000; 
+	--light: #FFFFFF; 
+	--blocks: #99B3C6;
+    --transition: all 0.3s ease 0s; 
+    /* all variables above */
+}
+
+* {
+	box-sizing: border-box;
 	margin: 0;
-    background-color: #BAD1E5;
-	position: relative;
+	padding: 0;
+}
+
+html, body{
+	height:100%;
+	overflow: auto;
 	font-family: "tt_normsbold", TT Norms, sans-serif;
-
 }
 
-.counters{
-	margin-top:8%;
-	text-align:center;
-	width:100%;
+body{
+	background-color: #BAD1E5;
 }
 
-.online-users, .total-users{
-	background: #99B3C6;
+p, h3 {
+	font-family: "tt_normsbold", TT Norms, sans-serif;
+	color: var(--light);
+	text-decoration: none;
+}
+
+main {
+	height: 100%;
+	display: grid;
+	grid-template-columns: minmax(60px, 1fr) repeat(3, minmax(50px, 380px)) minmax(60px, 1fr); 
+}
+
+.counters{ 
+	grid-column: 2 / span 3; /* middle three columns of grid */ 
+	display: flex; /* blocks next to each other */
+	justify-content: center;
+	align-items: center; /* blocks center of screen */
+	flex-wrap: wrap; /* wrap to next line on smaller screen */
+	margin-top: 80px;
+}
+
+.counter-block {
 	display: inline-block;
-	padding:2%;
-	margin:5%;
-	width:300px;
+	align-items: center;
+	background-color: var(--blocks);
+	text-align: center; 
+	height: 450px;
+	width: 400px;
 
-	font-size:32px;
-	color:#FFFFFF;
+	padding: 50px 50px 30px 50px;
+	margin: 30px 40px 30px 40px;
 }
 
-.online-users h3, .total-users h3{
+.counter-block p {
+	font-size: 32px;
+	margin: 30px 0 30px 0;
+}
+
+.counter-block h3{	
 	font-size:100px;
-	margin-top:20px;
-	margin-bottom:40px;
 }
 
-.space{
-	height: 47px;
-    display:inline-block;
-	text-align:center;
+.space-bar{
+	grid-column: 1 / span 5;
+	height: 50px;
+	margin-top: 40px;
+	color: var(--light);
+}
+
+.space-bar p{
+	text-align: center;
 
 	font-family: 'tt_normsthin_italic', TT Norms, sans-serif;
 	font-size: 30px;
-
-	color: #FFFFFF;
-}
-
-.space p {
-  margin: 0;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .footer{
-	height:17%;
- 	position: fixed;
-  	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: #000000;
-	color: #FFFFFF;
+	grid-column: 1 / span 5;
+	align-self: end;
+	height: 100px;
+	background-color: var(--dark);
+	color: var(--light);
 	text-align: center;
 	font-family: "tt_normsbold", TT Norms, sans-serif;
 }
 
-.footerIMG {
-	float:left;
-	height: 50%;
-	padding: 40px;
+.footer img {
+	float: left;
+	height: 60px;;
+	margin: 20px;
 }
 
-.footerText {
-	float:left;
-	padding-top:15px;
-	padding-left:100px;
+.footer h2 {
+	text-align: center;
+	padding-top:20px;
 	font-size: 40px;
 }
 
