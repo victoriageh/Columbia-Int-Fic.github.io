@@ -3,6 +3,10 @@
     <meta charset="utf-8"/>
     <link rel="shortcut icon" href="images/favicon_io/favicon.ico"/>
     <link rel="stylesheet" href="style.css"/>
+    
+    <!--fonts-->
+        <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Roboto">
 
     <!--navigation bar--> 
     <nav class="navigation">
@@ -12,38 +16,6 @@
         <a href="#.html">contact us</a> 
     </nav>
     
-            <!--JS Pop-up -->
-        <style>
-
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-}
-/* The popup from my last project, which needs to be changed to match our site's style... */
-.popup .popuptext {
-    visibility: hidden;
-    width: 300px;
-    background-color: #000;
-    color: #fff;
-    text-align: left;
-    border-radius: 6px;
-    padding: 8px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 25%;
-    left: 90%;
-    margin-left: 100px;
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-
-.popup .show {
-    visibility: visible;
-}
-</style>
     
     <title>Columbia Int Fic: What IF</title>
 
@@ -57,38 +29,81 @@
                 <h1 class="splash-txt-1">WHAT IF?</h1>
                 <h1 class="splash-txt-2">Click to continue</h1>
             </div>
+            
+            <!----
 
-     <!---- VERY IMPORTANT. THE PINPOINTS NEED TO BE INDIVIDUAL IMAGES PLACED IN FIGMA FOR ME TO MAKE THEM INTO LINKS.
-    
-    I know how to make the pinpoints into links, though I'm still figuring out how to place them in particulare spots. I also have the js code for pop ups, but I do need to change the formatting to match out site's styles.
+    below js code for pop ups and buttons. each button is labeled
+
+
+    story one below
 
      -->
-             <div class="popup" onclick="myFunction()"><p><u><link rel="pinpoint" href="images/Group%2019.png"/></u></p><span class="popuptext" id="myPopup"> 
         
-                 <p>This story is about a dog, a person, and an ill-timed squirrel.
-                 </p>
-                 
-            <ul>
-                <li><a href="###">org/charity links?</a></li>
-                <li><a href="###">Story Link</a></li>
-                
-            </ul>
-            </span></div>   
-            
-            <footer class="footer">
-                <p>Columbia Int Fic 2020. Columbia University.</p>
-            </footer>
-            
+        <div class="popup" onclick="myFunction()"><p>
+            <u>
+        <a href="#story1" class="Button story1"></a>
+            </u>
+        </p><span class="popuptext" id="myPopup1"> 
+                <h1>Story 1</h1>
+                 <p>This is story number one. It's awesome.(Should be on New York)<br>
+    <a href="test_story.html" class="enterButton">enter</a>
+                </p>
+            </span></div>      
 
+<!-- story two -->
+            
+ <div class="popup" onclick="myFunction2()"><p><u><a href="#story2" class="Button story2"></a></u></p><span class="popuptext" id="myPopup2"> 
+                <h1>Story 2</h1>
+                 <p>This is story number two. It's awesome. (Should be on South Korea)<br>
+    <a href="test_story.html" class="enterButton">enter</a>
+                </p>
+            </span></div> 
+
+<!-- story three -->
+            
+ <div class="popup" onclick="myFunction3()"><p><u><a href="#story3" class="Button story3"></a></u></p><span class="popuptext" id="myPopup3"> 
+                <h1>Story 3</h1>
+                 <p>This is story number three. It's awesome. (Should be over Philly-ish. This placement might be tricky)<br>
+    <a href="test_story.html" class="enterButton">enter</a>
+                </p>
+            </span></div> 
+            
+<!-- story four -->
+            
+ <div class="popup" onclick="myFunction4()"><p><u><a href="#story4" class="Button story4"></a></u></p><span class="popuptext" id="myPopup4"> 
+                <h1>Story 4</h1>
+                 <p>This is story number four. It's awesome. (This should be over Ireland, though the story also occurs in New Orleans)
+                     <br><a href="test_story.html" class="enterButton">enter</a>
+                </p>
+            </span></div> 
+            
 <script>
-
+    
+    //probably a simpler way to write this, but here's the popup functions//
 function myFunction() {
-    var popup = document.getElementById("myPopup");
+    var popup = document.getElementById("myPopup1");
     popup.classList.toggle("show");
 }
-</script>
+    function myFunction2() {
+    var popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");
+}
+    function myFunction3() {
+    var popup = document.getElementById("myPopup3");
+    popup.classList.toggle("show");
+}
+    function myFunction4() {
+    var popup = document.getElementById("myPopup4");
+    popup.classList.toggle("show");
+}
   
-    <script src="index.js"></script>       
+</script>
+
+<footer class="footer">
+                <p>Columbia Int Fic 2020. Columbia University.</p>
+            </footer>
+  
+    <script src="index.js"></script>   
 
     </body>
     
