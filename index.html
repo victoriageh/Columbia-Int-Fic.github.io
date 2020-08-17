@@ -18,8 +18,8 @@
     
     
     <title>Columbia Int Fic: What IF</title>
-    
-        <body>
+
+        <body id="home-body"> <!--changed "body" id to "home-body" for CSS specification-->
 
             <!--Code for intro splash screen-->
             <div class="splash">
@@ -36,6 +36,7 @@
 
 
     story one below
+
      -->
         
         <div class="popup" onclick="myFunction()"><p>
@@ -95,14 +96,16 @@ function myFunction() {
     var popup = document.getElementById("myPopup4");
     popup.classList.toggle("show");
 }
-
+  
 </script>
-            
-    <script src="app.js"></script>       
+
+<footer class="footer">
+                <p>Columbia Int Fic 2020. Columbia University.</p>
+            </footer>
+  
+    <script src="index.js"></script>   
+
     </body>
     
-<!--idk if we need a footer, but just in case
-    <footer>&copy; Columbia Int Fic 2020
-    </footer>  
--->
+
 </html>

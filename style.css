@@ -9,7 +9,7 @@ body {
         font-family: 'Roboto', serif;
       }
 
-body {
+#home-body {
     background-image: url(images/Group.svg);
     background-color: #2B2D35;
     height: 800px; /*it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
@@ -82,6 +82,43 @@ footer {
 }
 */
 
+
+#story-body {
+    background-color: #5D926E;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.head {
+    display: flex;
+}
+
+.story-pg-whatif {
+    padding-left: 50px;
+}
+
+.story-pg-title {
+    text-align: center;
+    font-size: 400%;
+    padding-left: 315px;
+    margin-top: 0px;
+}
+
+.footer {
+    left: 0; 
+    bottom: 0; 
+    width: 100%;
+    text-align: center;
+}
+
+.story-txt {
+    width: 95%;
+    height: 100vh;
+    border: solid #000;
+    border-width: 3px;
+    background-color: #8EC29F;
+    margin: auto;
+}
+
 /* CSS styling for splash screen */
 .splash {
     position: fixed;
@@ -150,6 +187,7 @@ footer {
     animation-delay: 2s;
 }
 
+  
 /*Button
     There's the general button code and then each button also gets its own code for placement purposes.
 */
