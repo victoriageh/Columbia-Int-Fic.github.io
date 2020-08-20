@@ -15,15 +15,14 @@
 html, body{
 	height:100%;
 	overflow: auto;
-	font-family: "tt_normsbold", sans-serif;
+	font-family: 'Maven Pro', sans-serif;
 }
 
 body{
 	background-color: #BAD1E5;
 }
 
-p, h3, h4, h1 {
-	font-family: 'tt_normsbold', sans-serif;
+p, a, h3, h4, h1 {
 	color: var(--light);
 	text-decoration: none;
 }
@@ -61,7 +60,7 @@ main {
 }
 
 .counter-block h3{	
-	font-size:100px;
+	font-size:150px;
 }
 
 /* continue button */
