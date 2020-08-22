@@ -1,0 +1,35 @@
+#story-body {
+    background-color: #5D926E;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.head {
+    display: flex;
+}
+
+.story-pg-whatif {
+    padding-left: 50px;
+}
+
+.story-pg-title {
+    text-align: center;
+    font-size: 400%;
+    padding-left: 315px;
+    margin-top: 0px;
+}
+
+.footer {
+    left: 0; 
+    bottom: 0; 
+    width: 100%;
+    text-align: center;
+    align-self: end;
+}
+
+.story-txt {
+    width: 95vw;
+    height: 85vh;
+    border-width: 3px;
+    background-color: #8EC29F;
+    margin: auto;
+}
