@@ -113,9 +113,8 @@ footer {
 }
 
 .story-txt {
-    width: 95%;
-    height: 100vh;
-    border: solid #000;
+    width: 95vw;
+    height: 85vh;
     border-width: 3px;
     background-color: #8EC29F;
     margin: auto;
