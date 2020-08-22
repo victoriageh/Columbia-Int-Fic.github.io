@@ -39,7 +39,7 @@ a:hover{
     position: relative;
 }
 
-.wechat-static { /* WeChat background image */
+.wechat-static, .wechat-static2 { /* WeChat background image */
     display: block;
     margin-left: auto;
     margin-right: auto;
