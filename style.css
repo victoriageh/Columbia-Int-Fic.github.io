@@ -53,11 +53,6 @@ nav a:link{
     text-decoration:none;
 }
 
-nav a:hover {
-    color: aquamarine;
-    text-decoration: underline;
-}
-
 
 /* general links appearance*/
 
@@ -194,9 +189,9 @@ footer {
 */
 
 .Button {
-	background-color:#000000;
-	border-radius:42px;
-	border:8px solid #ffffff;
+    background: #D69898;
+    border-radius:42px;
+	border:5px solid #ffffff;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
