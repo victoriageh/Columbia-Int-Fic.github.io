@@ -1,8 +1,6 @@
 a {
     text-decoration: none;
-}
-
-a:visited {
+    font-weight: 500;
     color: black;
 }
 
@@ -10,13 +8,13 @@ a:hover{
     color: #00bfff;
 }
 
-.wechat-img {
-display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.wechat-static {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-#translate-button:hover {
+.wechat-button:hover {
     cursor: pointer;
 }
