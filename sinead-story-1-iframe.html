@@ -23,18 +23,14 @@
     <div id="img-overlay" onclick="off()">
         <div id="pic">
             <img width="100" height="100"
-            src="images/logo sketch 3.png">
+            src="images/logo sketch 3.png"
+            id="myImage">
         </div>
     </div>
 
     <div class="script">
         <script>
             window.onmessage = function(e) {
-                //Need to figure out a standardized system such that each img-clicker sends out a
-                //different number. The parent then receives each number and correspondingly
-                //displays a different image. How could this be done? Would need to utilize
-                //for loop?
-
                 //Got it! Twine will send messages like "img1", "img2", etc. The function here will
                 //separate 'img' from the num after it. Create a variable which stores this num.
                 //If e.data == "img", then pass the num variable to a function that will pick the 
@@ -50,12 +46,14 @@
                 //If you're doing this though, doesn't this iframe file become entirely useless...?
                 //Can't you just use the main parent page for everything you would be using this for?
 
-                var s = e.data.toString();
-                if (e.data == 'img1') {
-                    window.top.postMessage('img1', '*');
-                    console.log(s.charAt(3));
-                    on();
-                }
+                s = e.data.toString();
+                s = s.charAt(3);
+                console.log(s);
+                document.getElementById("myImage").src = "images/sinead/img" + s + ".jpg";
+                on();
+
+            
+
             }
             function on() {
                 document.getElementById('img-overlay').style.display = "block";

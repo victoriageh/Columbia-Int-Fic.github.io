@@ -82,9 +82,9 @@ footer {
 }
 */
 
-
+/* Styling for Sinead-Louisa story body */
 #story-body {
-    background-image:url("images/desktop.png");
+    background-image:url("images/sinead/desktop.png");
     background-position: 0vh 0vh;
     background-repeat: no-repeat;
     background-size: 100%;
