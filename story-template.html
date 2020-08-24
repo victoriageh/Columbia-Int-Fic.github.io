@@ -12,11 +12,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body id="story-body">
+    <body id="template-body">
         
         <!-- Ideally make the h2 and h1 as class so you can use
         same CSS across different webpages for different stories. -->
-        <header class="head">
+        <header class="template-head">
             <a href="index.html"><h2 class="story-pg-whatif">WHAT IF</h2></a>
             <h1 class="story-pg-title">Story Title</h1>
         </header>
@@ -31,9 +31,21 @@
                 window.onmessage = function(e) {
                     if (e.data == 'hello') {
                         /* Replace this link with story credits page link */
-                        window.location.href = "credits.html"; 
+                        window.location.href = "credits.html";
+                        console.log("msg received!");
                     }
                 };
+
+                /* window.addEventListener('message', (e) => {
+                    if (e.data == 'hello') {
+                        /* Replace this link with story credits page link 
+                        //window.location.href = "credits.html";
+                        console.log("addEventListener works!");
+                        e = 'end';
+                        console.log(e);
+                    }
+                    
+                }); */
             </script>
 
             <div class="story-txt">
@@ -48,9 +60,10 @@
 
         </main>
 
+        <!--
         <footer class="footer">
             <p>Columbia Int Fic 2020. Columbia University.</p>
-        </footer>
+        </footer> -->
 
         <script src="story-template.js"></script>
     </body>

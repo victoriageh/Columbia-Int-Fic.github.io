@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="iframe-body">
+
+    <div class="twine-embedder">
+        <iframe
+            mozallowfullscreen="true"
+            src="sinead-story-1.html"
+            frameborder="0"
+            width="100%" height="100%"
+            
+            id="twine-embed">
+        </iframe>
+
+    </div>
+
+    <div id="img-overlay" onclick="off()">
+        <div id="pic">
+            <img width="100" height="100"
+            src="images/logo sketch 3.png">
+        </div>
+    </div>
+
+    <div class="script">
+        <script>
+            window.onmessage = function(e) {
+                //Need to figure out a standardized system such that each img-clicker sends out a
+                //different number. The parent then receives each number and correspondingly
+                //displays a different image. How could this be done? Would need to utilize
+                //for loop?
+
+                //Got it! Twine will send messages like "img1", "img2", etc. The function here will
+                //separate 'img' from the num after it. Create a variable which stores this num.
+                //If e.data == "img", then pass the num variable to a function that will pick the 
+                //appropriate image, which is titled by the appropriate number.
+                //For the image overlay, then, I will need to find a way to change the overlay div's
+                //css background image to the appropriate image every time a new clicker is clicked.
+                //The following code is WILDLY unfinished.
+                
+                //WANNA UTILIZE THESE CSS ANIMATIONS: https://www.youtube.com/watch?v=xA8nDzC7PyY
+
+                //!!!Running the image overlay in this iframe does not work. Might need to send the 
+                //postMessage to the main parent, and do an overlay there. Damn. 
+                //If you're doing this though, doesn't this iframe file become entirely useless...?
+                //Can't you just use the main parent page for everything you would be using this for?
+
+                var s = e.data.toString();
+                if (e.data == 'img1') {
+                    window.top.postMessage('img1', '*');
+                    console.log(s.charAt(3));
+                    on();
+                }
+            }
+            function on() {
+                document.getElementById('img-overlay').style.display = "block";
+            }
+            function off() {
+                document.getElementById('img-overlay').style.display = "none";
+            }
+        </script>
+    </div>
+</body>
+</html>

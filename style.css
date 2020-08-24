@@ -84,23 +84,46 @@ footer {
 
 
 #story-body {
+    background-image:url("images/desktop.png");
+    background-position: 0vh 0vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Catamaran', sans-serif;
+}
+
+#template-body {
     background-color: #5D926E;
     font-family: 'Catamaran', sans-serif;
 }
 
-.head {
+.story-head {
     display: flex;
+    background-color: lightblue;
+    margin-top: -1.4vh;
+    margin-right: -1vh;
+    margin-left: -1vh;
+    
+}
+
+.template-head {
+    display: flex;
+    margin-top: -1.4vh;
+    margin-right: -1vh;
+    margin-left: -1vh;
+    
 }
 
 .story-pg-whatif {
-    padding-left: 50px;
+    padding-left: 8vh;
+    margin-top: 3vh;
 }
 
 .story-pg-title {
     text-align: center;
-    font-size: 400%;
-    padding-left: 315px;
-    margin-top: 0px;
+    font-size: 300%;
+    padding-left: 22%; /* try and put all padding in vh rather than px, for cross screen compatibility*/
+    margin-top: 2vh;
+    position: static;
 }
 
 .footer {
@@ -111,13 +134,62 @@ footer {
 }
 
 .story-txt {
-    width: 95%;
-    height: 100vh;
+    width: 50%;
+    height: 50vh;
+    position: fixed;
+    top: 200px;
+    left: 500px;
     border: solid #000;
     border-width: 3px;
-    background-color: #8EC29F;
     margin: auto;
 }
+
+/*CSS styling for Sinead and Louisa iframe*/
+
+#iframe-body {
+    background-color: black;
+}
+
+.twine-embedder {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:100%;
+    overflow: hidden; /* hide scrollbar */
+}
+
+#img-overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#pic {
+    display: block;
+    margin: 0 auto;
+    max-width: 230px;
+    max-height: 95px;
+    width: auto;
+    height: auto;
+    padding-top: 70px;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    line-height: 90vh;
+}
+
 
 /* CSS styling for splash screen */
 .splash {
