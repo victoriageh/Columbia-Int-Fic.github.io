@@ -53,11 +53,24 @@ Glasses. Where are [[my glasses?-&gt;1. Stretching]]</div>
 
 </tw-passagedata>
 
-<tw-passagedata pid="2" name="1. Stretching" tags="" position="374.5,215.5" size="100,100">The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. Let’s outdo the sun.
+<tw-passagedata pid="2" name="1. Stretching" tags="" position="374.5,215.5" size="100,100">The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. <a><div class="appear">Let’s outdo the sun.</div></a><div class="hidden">
+I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting <a class ="appear2">ready.</a></div>
 
-I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting ready. 
+<div class="numbers">1 2 3 4 5[[...-&gt;1.1 Meditation]]</div>
 
-1, 2, 3, 4, 5,[[...-&gt;1.1 Meditation]]</tw-passagedata>
+<script>
+  /* click to show second paragrpah */
+  $("div.appear").click(function(){
+    $("div.hidden").fadeIn("slow");
+  });
+
+  /* click and numbers slowly appear */
+  $("div.appear2").click(function(){
+    $("div.numbers").fadeIn("slow");
+  });
+</script>
+
+</tw-passagedata>
 
 <tw-passagedata pid="3" name="2. Groceries" tags="" position="677.5,217.5" size="100,100">And all is done. I’ve brushed my teeth, washed my face, dressed (and maybe I’ve lied back in bed for just a minute or two). It’s 5:21 AM. Now, to eat:
 
@@ -313,13 +326,14 @@ I hear my stop on the speaker. [[I bookmark the post for later.-&gt;11. Ritual]]
 </tw-passagedata>
 
 <tw-passagedata pid="21" name="21. End" tags="" position="596,540.5" size="100,100">End.
+  <!-- prompts message, then redirects to credits-->
   &lt;script&gt;
-    window.top.postMessage(&#39;hello&#39;, &#39;*&#39;);
+    window.top.postMessage(&#39;credits&#39;, &#39;*&#39;); 
   
   window.onmessage = function(e) {
-    if (e.data == 'hello') {
+    if (e.data == 'credits') {
         /* Replace this link with story credits page link */
-        window.location.href = "/../credits.html"; 
+        window.location.href = "../credits.html"; 
     }
   };
   &lt;/script&gt;

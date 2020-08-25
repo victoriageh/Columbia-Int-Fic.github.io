@@ -34,7 +34,7 @@ a:hover{
     color: #00bfff;
 }
 
-/* WeChat SVGs */
+/* 0.0: WeChat SVGs */
 .wechat { /* WeChat DIV */
     position: relative;
 }
@@ -63,8 +63,18 @@ a:hover{
 
 }
 
-.wechat-hidden {
+/* ALL HIDDEN ELEMENTS TO APPEAR ON ALL PAGES */
+.hidden {
     display: none;
-    text-align: justify;
 }
 
+/* ALL CLICKABLE ELEMENTS TO PROMPT HIDDEN TEXT */
+.appear, .appear2 {
+    font-style: italic;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.numbers {
+    display: none;
+}
