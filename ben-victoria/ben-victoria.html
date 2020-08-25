@@ -53,20 +53,26 @@ Glasses. Where are [[my glasses?-&gt;1. Stretching]]</div>
 
 </tw-passagedata>
 
-<tw-passagedata pid="2" name="1. Stretching" tags="" position="374.5,215.5" size="100,100">The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. <a><div class="appear">Let’s outdo the sun.</div></a><div class="hidden">
-I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting <a class ="appear2">ready.</a></div>
+<tw-passagedata pid="2" name="1. Stretching" tags="" position="374.5,215.5" size="100,100">The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. <a class="appear">Let’s outdo the sun.</a><div class="hidden">
+I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting <a class="appear2">ready.</a></div>
 
 <div class="numbers">1 2 3 4 5[[...-&gt;1.1 Meditation]]</div>
 
 <script>
   /* click to show second paragrpah */
-  $("div.appear").click(function(){
+  $(".appear").click(function(){
     $("div.hidden").fadeIn("slow");
   });
 
   /* click and numbers slowly appear */
-  $("div.appear2").click(function(){
-    $("div.numbers").fadeIn("slow");
+  $(".appear2").click(function(){
+    var str = $("div.numbers").html();
+
+    var spans = '<span>' + str.split(/\s+/).join(' </span><span>') + '</span>';
+
+    $(spans).hide().appendTo('body').each(function(i) {
+        $(this).delay(1000 * i).fadeIn();
+    });
   });
 </script>
 
