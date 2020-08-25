@@ -18,7 +18,7 @@
 <script role="script" id="twine-user-script" type="text/twine-javascript"> /* twine-user-script #1: "UserScript" */
   /* import jQuery UI library. */
   $(function () {
-    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
+    $.getScript("https://code.jquery.com/jquery-3.5.0.js",
       function (data, textStatus, jqxhr) {
         console.log('jquery ui file loaded');
       }
@@ -30,12 +30,12 @@
 
 <div class="wechat">
   <div class="wechat-static"><img src="iphone1.svg"></div>
-  <div class="wechat-button"><img src="translate.svg" class="wechat-button"></div>
-  <div id="wechat-static2"><img src="translated.svg" style="display:none" id="1-hidden"></div>
+  <div class="wechat-button"><img src="translate.svg"></div>
+  <div class="wechat-hidden"><img src="translated.svg"></div>
 </div>
 
 <!-- Once user clicks on translate, the below appears -->
-<div id="2-hidden"> 
+<div class="wechat-hidden"> 
 It isn’t so easy to get to you anymore. Have you eaten? Ma, why stay up so late? 
 
 //duì bù qĭ//, I’m sorry. This’ll be left read at 5:04AM (and unreplied, for now)—I’m putting my phone down, my eyes are stinging that slow burn of fatigue. I did, Ma, I promise, but sometime real late last night and I’m not so hungry this morning. But these twelve hour shifts: I need to eat something.
@@ -47,8 +47,7 @@ Glasses. Where are [[my glasses?-&gt;1. Stretching]]</div>
   $("div.wechat-button").click(function(){
     $("div.wechat-button").hide();
     $("div.wechat-static").hide();
-    $("#1-hidden").fadeIn("slow");
-    $("#2-hidden").fadeIn("slow");
+    $("div.wechat-hidden").fadeIn("slow");
   });
 </script>
 
@@ -316,6 +315,13 @@ I hear my stop on the speaker. [[I bookmark the post for later.-&gt;11. Ritual]]
 <tw-passagedata pid="21" name="21. End" tags="" position="596,540.5" size="100,100">End.
   &lt;script&gt;
     window.top.postMessage(&#39;hello&#39;, &#39;*&#39;);
+  
+  window.onmessage = function(e) {
+    if (e.data == 'hello') {
+        /* Replace this link with story credits page link */
+        window.location.href = "/../credits.html"; 
+    }
+  };
   &lt;/script&gt;
 </tw-passagedata>
 
