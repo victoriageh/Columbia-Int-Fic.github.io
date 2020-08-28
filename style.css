@@ -18,6 +18,7 @@ html, body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 95%;
+    width: 100%;
     
 /* can't figure out the figma dimensions, but here they are whenever I figure it out
     position: absolute;
