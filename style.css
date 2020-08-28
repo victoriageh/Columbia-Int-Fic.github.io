@@ -10,20 +10,12 @@ body {
       }
 
 #home-body {
-    background-image: url(images/Group.svg);
-    background-color: #2B2D35;
-    height: 800px; /*it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
-    background-position: center;
+    background-image: url(images/BlueMap.png);
+    background-color: #EEEEEE;
+    height: auto; /* ahh I think I figured it out */
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    
-/* can't figure out the figma dimensions, but here they are whenever I figure it out
-    position: absolute;
-    width: 1920px;
-    height: 1323.64px;
-    left: -6px;
-    top: 1px;
-*/
 }
 
 /*nav info, including link specs
@@ -37,8 +29,8 @@ ISSUES: should we add mini-logo?
     width: 100%;
     font-family: "Roboto-Regular", sans-serif; 
     font-size: 20pt;
-    color: white;
-    background-color: #2B2D35;
+    color: #D69898;
+    /*background-color: #2B2D35;*/
     text-align-last: right;
     padding: 30% -40%; /*fix padding on right side, why won't it workkkk*/
     display: inline-block;
@@ -48,12 +40,12 @@ ISSUES: should we add mini-logo?
 
 nav a:link{
     font-family: "Roboto-Regular", "Roboto", sans-serif;
-    color: white;
+    color: #D69898;
     text-decoration:none;
 }
 
 nav a:hover {
-    color: aquamarine;
+    color: #D69898;
     text-decoration: underline;
 }
 
@@ -71,16 +63,21 @@ a:hover {color: aquamarine;
 a:active {color: blue; 
 } 
 
-/*start footer*/
+/*start footer. Do we actually want a footer? Or just */
 
-/*
+
 footer {
     overflow: hidden;
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
+    font-family: "Roboto-Regular", sans-serif; 
+    font-size: 20pt;
+    color: #D69898;
+    text-align-last: left;
+    display: inline-block;
 }
-*/
 
 
 #story-body {
@@ -101,13 +98,6 @@ footer {
     font-size: 400%;
     padding-left: 315px;
     margin-top: 0px;
-}
-
-.footer {
-    left: 0; 
-    bottom: 0; 
-    width: 100%;
-    text-align: center;
 }
 
 .story-txt {
@@ -193,7 +183,7 @@ footer {
 */
 
 .Button {
-	background-color:#000000;
+	background-color:#D69898;
 	border-radius:42px;
 	border:8px solid #ffffff;
 	display:inline-block;
@@ -213,7 +203,7 @@ footer {
 
 /* story 1 (New York) */
 .story1 {
-    margin-left: 850%;
+    margin-left: 800%;
     margin-bottom: -625%;
 }
 
@@ -221,19 +211,19 @@ footer {
 /* story 2 (South Korea) */
 .story2 {
     margin-left: 2500%;
-    margin-bottom: -750%;
+    margin-bottom: -745%;
 }
 
 /* story 3 (Philadelphia) */
 .story3 {
-    margin-left: 600%;
-    margin-bottom: -725%;
+    margin-left: 510%;
+    margin-bottom: -700%;
 }
 
 /* story 4 (Ireland/New Orleans) */
 .story4 {
-    margin-left: 1050%;
-    margin-bottom: -580%;
+    margin-left: 1100%;
+    margin-bottom: -480%;
 }
 
 /*javascript pop-up*/
@@ -242,8 +232,8 @@ footer {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    user-select: none;
 }
+
 /* The popup matches our style for the most part.*/
 .popup .popuptext {
     visibility: hidden;
@@ -261,7 +251,7 @@ footer {
     right: 20%;
     z-index: 10000;
     font-family: "Roboto-Regular", sans-serif; 
-    border: 4px solid black;
+    border: 5px solid #6396B3;
 }
 
 .popup .show {
@@ -269,19 +259,52 @@ footer {
 }
 
 .enterButton {
-	background-color:#80c0ad;
+	background-color:#BAD1E5;
 	display:inline-block;
 	cursor:pointer;
-	color:#000000;
-	font-family: "Roboto", sans-serif;
+	color: white;
+	font-family: "Maven Pro", sans-serif;
 	font-size:28px;
 	padding:13px 49px;
-	text-decoration:none;
+	text-decoration: none;
 }
 .enterButton:hover {
-	background-color:#6abda4;
+	background-color:#BAD1E5; /*could have it change colors on hover by changing this*/
 }
 .enterButton:active {
 	position:relative;
 	top:1px;
+}
+
+/* Testing out modal ~ CSS Styles
+Update: deleted modal. But transfering some properties to popup-blurred background in background color
+*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* The Close Button. Definitely stays, works well. */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
